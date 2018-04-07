@@ -8,13 +8,13 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-// function sum(a, b) { //eslint-disable-line
-//   var sumNumber = a + b;
-//   return [sumNumber, 'The sum of ' + a + ' and ' + b + ' is ' + sumNumber + '.'];
-// }
+function sum(a, b) { //eslint-disable-line
+  var sumNumber = a + b;
+  return [sumNumber, 'The sum of ' + a + ' and ' + b + ' is ' + sumNumber + '.'];
+}
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -26,14 +26,14 @@ Write a function called multiply() that takes in two numbers as arguments and re
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
-// Write your code here
-// function multiply(a, b) { //eslint-disable-line
-//   var multipliedNumber = a * b;
-//   return [multipliedNumber, 'The product of ' + a + ' and ' + b + ' is ' + multipliedNumber];
-// }
+//Write your code here
+function multiply(a, b) { //eslint-disable-line
+  var multipliedNumber = a * b;
+  return [multipliedNumber, 'The product of ' + a + ' and ' + b + ' is ' + multipliedNumber + '.'];
+}
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -50,16 +50,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  var sumNumber = a + b;
-  var multipliedNumber = a * b;
-  var sumThreeNumber = sumNumber + c;
-  var mulThreeNumber = multipliedNumber * c;
-  return [sumThreeNumber, mulThreeNumber, a + ' and ' + b + ' and ' + c + ' sum to ' + sumThreeNumber, 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + mulThreeNumber + '.']
+  var sumThreeNumber = sum(a, b)[0];
+  var sumC = sum(sumThreeNumber, c)[0];
+  var mulThreeNumber = multiply(a, b)[0];
+  var mulC = multiply(mulThreeNumber, c)[0];
+  return [sumC, mulC, a + ' and ' + b + ' and ' + c + ' sum to ' + sumC + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + mulC + '.'];
 }
 
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -97,9 +97,9 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
+//function multiplyArray(multArr) { //eslint-disable-line
 
-}
+//}
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
